@@ -8,4 +8,6 @@
 
 多线程采用windowsAPI，支持在windows系统上使用，如果是在Linux或Uinx上请使用Pthread。
 
+新加入的4x4分块使用SIMD指令计算，后续会加入其他算子优化以及CUDA程序。
+
 其他方法在学习中，请支持我。
