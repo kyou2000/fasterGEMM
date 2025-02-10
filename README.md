@@ -6,8 +6,11 @@
 一般情况下推荐与核心数量相同。
 
 支持架构： X86_64平台
+
 操作系统： Windows & Linux
+
 示例部分由C语言编写：
+
 其中8x8分块使用了avx和fma指令集进行计算，其他均使用了多线程计算，
 
 在使用fma以及avx指令集时务必加上链接选项，机器本身需要支持avx或avx2。
@@ -16,23 +19,36 @@
 
 矩阵存储方式：行主元
 
+编译器推荐：
+
+windows:MinGW, Linux:GCC/G++
+
+
 新分块优化了分块写回以及内存对齐；
-请在Linux系统上测试：
+
+请在Linux系统上测试。
 测试文件均为C文件。
 
 新加入的4x4分块使用SIMD指令计算，后续会加入其他算子优化以及CUDA程序。
 
 
 应用部分由c++编写：
+
 安装方法：
+
 1. 下载源码
+2. 
     git clone https://github.com/kyou2000/fasterGEMM.git
 
 2.切换到源码目录下
     cd fasterGEMM
+    
     mkdir build
+    
     cd build
+    
     cmake ..
+    
     make
 
 编译后的动态库和静态库位于lib目录下。
